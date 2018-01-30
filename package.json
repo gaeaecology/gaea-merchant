@@ -1,21 +1,21 @@
 {
-  "name": "byteball-merchant",
-  "description": "Byteball Merchant",
-  "author": "Byteball",
+  "name": "GAEA-merchant",
+  "description": "GAEA Merchant",
+  "author": "GAEA",
   "version": "0.1.0",
   "main": "merchant.js",
   "keywords": [
     "merchant",
-    "byteball",
+    "GAEA",
     "chatbot"
   ],
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/byteball/byteball-merchant.git",
+    "url": "git://github.com/GAEA/GAEA-merchant.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/byteball/byteball-merchant/issues"
+    "url": "https://github.com/GAEA/GAEA-merchant/issues"
   },
   "browser": {
     "request": "browser-request",
@@ -23,6 +23,6 @@
   },
   "dependencies": {
     "bitcore-lib": "^0.13.14",
-    "byteballcore": "git+https://github.com/byteball/byteballcore.git"
+    "GAEAcore": "git+https://github.com/GAEA/GAEAcore.git"
   }
 }

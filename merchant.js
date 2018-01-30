@@ -1,14 +1,14 @@
 /*jslint node: true */
 "use strict";
-var conf = require('byteballcore/conf.js');
-var device = require('byteballcore/device.js');
-var walletDefinedByKeys = require('byteballcore/wallet_defined_by_keys.js');
+var conf = require('GAEAcore/conf.js');
+var device = require('GAEAcore/device.js');
+var walletDefinedByKeys = require('GAEAcore/wallet_defined_by_keys.js');
 var crypto = require('crypto');
 var fs = require('fs');
-var db = require('byteballcore/db.js');
-var eventBus = require('byteballcore/event_bus.js');
-var desktopApp = require('byteballcore/desktop_app.js');
-require('byteballcore/wallet.js'); // we don't need any of its functions but it listens for hub/* messages
+var db = require('GAEAcore/db.js');
+var eventBus = require('GAEAcore/event_bus.js');
+var desktopApp = require('GAEAcore/desktop_app.js');
+require('GAEAcore/wallet.js'); // we don't need any of its functions but it listens for hub/* messages
 
 var appDataDir = desktopApp.getAppDataDir();
 var KEYS_FILENAME = appDataDir + '/' + conf.KEYS_FILENAME;
@@ -201,7 +201,7 @@ eventBus.on('text', function(from_address, text){
 						state.amount += 1000;
 						response += ' and Cola';
 					}
-					response += ".\nOrder total is "+state.amount+" bytes.  Please pay.\n["+state.amount+" bytes](byteball:"+state.address+"?amount="+state.amount+")";
+					response += ".\nOrder total is "+state.amount+" bytes.  Please pay.\n["+state.amount+" bytes](GAEA:"+state.address+"?amount="+state.amount+")";
 					updateState(state);
 					device.sendMessageToDevice(from_address, 'text', response);
 				});
